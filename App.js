@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ProofGenerator from './components/ProofGenerator';
+import ActivityVerifier from './components/ActivityVerifier';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Catoff-Reclaim Integration</Text>
+      <ProofGenerator />
+      <ActivityVerifier />
     </View>
   );
 }
@@ -16,5 +19,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
   },
 });
